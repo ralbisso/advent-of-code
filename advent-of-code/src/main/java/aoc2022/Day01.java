@@ -1,12 +1,45 @@
 package aoc2022;
 
+import java.util.Arrays;
+import java.util.List;
+
+import utils.FileUtils;
+import utils.enums.Day;
+import utils.enums.Year;
+
 public class Day01 {
 
+    private final static List<String> LINES = FileUtils.getAllLines(Year.YEAR_2022, Day.DAY_01);
+
     public int solvePart1() {
-        return 0;
+        int max = 0, elf = 0;
+        for (String snack : LINES) {
+            if (snack.isEmpty()) {
+                if (elf > max) {
+                    max = elf;
+                }
+                elf = 0;
+            } else {
+                elf += Integer.parseInt(snack);
+            }
+        }
+        return max;
     }
 
     public int solvePart2() {
-        return 0;
+        int[] max = { 0, 0, 0 };
+        int elf = 0;
+        for (String snack : LINES) {
+            if (snack.isEmpty()) {
+                if (elf > max[0]) {
+                    max[0] = elf;
+                    Arrays.sort(max);
+                }
+                elf = 0;
+            } else {
+                elf += Integer.parseInt(snack);
+            }
+        }
+        return max[0] + max[1] + max[2];
     }
 }
