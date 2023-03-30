@@ -6,11 +6,11 @@ import utils.enums.Day;
 public class Day01 extends AoC2015 {
 
     private final Day day = Day.DAY_01;
-    private final String input = FileUtils.getLine(year, day);
+    private final char[] input = FileUtils.getLineAsCharArray(year, day);
 
     public int solvePart1() {
         int floor = 0;
-        for (char c : input.toCharArray()) {
+        for (char c : input) {
             floor += (c == '(') ? 1 : -1;
         }
         return floor;
@@ -18,7 +18,7 @@ public class Day01 extends AoC2015 {
 
     public int solvePart2() {
         int floor = 0, position = 1;
-        for (char c : input.toCharArray()) {
+        for (char c : input) {
             floor += (c == '(') ? 1 : -1;
             if (floor == -1) {
                 break;
