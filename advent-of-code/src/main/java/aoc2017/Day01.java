@@ -9,10 +9,10 @@ public class Day01 extends AoC2017 {
     private final String input = FileUtils.getLine(year, day);
 
     public int solvePart1() {
-        int sum = 0;
         char[] captcha = input.toCharArray();
-        for (int i = 0; i < captcha.length; i++) {
-            if (captcha[i] == captcha[(i + 1) % captcha.length]) {
+        int sum = 0, length = captcha.length;
+        for (int i = 0; i < length; i++) {
+            if (captcha[i] == captcha[(i + 1) % length]) {
                 sum += Character.getNumericValue(captcha[i]);
             }
         }
@@ -21,9 +21,9 @@ public class Day01 extends AoC2017 {
 
     public int solvePart2() {
         char[] captcha = input.toCharArray();
-        int sum = 0, offset = captcha.length / 2;
-        for (int i = 0; i < captcha.length; i++) {
-            if (captcha[i] == captcha[(i + offset) % captcha.length]) {
+        int sum = 0, length = captcha.length, offset = length / 2;
+        for (int i = 0; i < length; i++) {
+            if (captcha[i] == captcha[(i + offset) % length]) {
                 sum += Character.getNumericValue(captcha[i]);
             }
         }
