@@ -6,25 +6,23 @@ import utils.enums.Day;
 public class Day01 extends AoC2017 {
 
     private final Day day = Day.DAY_01;
-    private final String input = FileUtils.getLine(year, day);
+    private final char[] input = FileUtils.getLineAsCharArray(year, day);
 
     public int solvePart1() {
-        char[] captcha = input.toCharArray();
-        int sum = 0, length = captcha.length;
+        int sum = 0, length = input.length;
         for (int i = 0; i < length; i++) {
-            if (captcha[i] == captcha[(i + 1) % length]) {
-                sum += Character.getNumericValue(captcha[i]);
+            if (input[i] == input[(i + 1) % length]) {
+                sum += Character.getNumericValue(input[i]);
             }
         }
         return sum;
     }
 
     public int solvePart2() {
-        char[] captcha = input.toCharArray();
-        int sum = 0, length = captcha.length, offset = length / 2;
+        int sum = 0, length = input.length, offset = length / 2;
         for (int i = 0; i < length; i++) {
-            if (captcha[i] == captcha[(i + offset) % length]) {
-                sum += Character.getNumericValue(captcha[i]);
+            if (input[i] == input[(i + offset) % length]) {
+                sum += Character.getNumericValue(input[i]);
             }
         }
         return sum;
