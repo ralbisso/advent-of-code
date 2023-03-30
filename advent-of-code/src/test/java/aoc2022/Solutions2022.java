@@ -1,6 +1,6 @@
 package aoc2022;
 
-public final class Solutions2022 {
+final class Solutions2022 {
     final static int DAY01_PART1 = 69501;
     final static int DAY01_PART2 = 202346;
     final static int DAY02_PART1 = 8890;
