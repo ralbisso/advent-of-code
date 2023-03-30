@@ -24,7 +24,15 @@ public class FileUtils {
         return lines;
     }
 
+    public static int[] getAllLinesAsIntArray(Year year, Day day) {
+        return getAllLines(year, day).stream().mapToInt(Integer::parseInt).toArray();
+    }
+
     public static String getLine(Year year, Day day) {
         return getAllLines(year, day).get(0);
+    }
+
+    public static char[] getLineAsCharArray(Year year, Day day) {
+        return getLine(year, day).toCharArray();
     }
 }
