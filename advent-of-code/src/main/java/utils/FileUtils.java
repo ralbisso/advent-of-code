@@ -23,4 +23,8 @@ public class FileUtils {
         }
         return lines;
     }
+
+    public static String getLine(Year year, Day day) {
+        return getAllLines(year, day).get(0);
+    }
 }
