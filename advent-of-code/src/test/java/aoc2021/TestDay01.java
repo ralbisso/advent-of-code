@@ -9,11 +9,11 @@ public class TestDay01 {
 
     @Test
     public void testPart1() {
-        Assert.assertEquals(69501, day.solvePart1());
+        Assert.assertEquals(1752, day.solvePart1());
     }
 
     @Test
     public void testPart2() {
-        Assert.assertEquals(202346, day.solvePart2());
+        Assert.assertEquals(1781, day.solvePart2());
     }
 }

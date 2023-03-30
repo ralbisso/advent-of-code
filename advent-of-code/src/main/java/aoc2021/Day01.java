@@ -1,12 +1,31 @@
 package aoc2021;
 
-public class Day01 {
+import utils.FileUtils;
+import utils.enums.Day;
+
+public class Day01 extends AoC2021 {
+
+    private final Day day = Day.DAY_01;
+    private final int[] input = FileUtils.getAllLinesAsIntArray(year, day);
 
     public int solvePart1() {
-        return 0;
+        int count = 0;
+        for (int i = 1; i < input.length; i++) {
+            if (input[i] > input[i - 1]) {
+                count++;
+            }
+        }
+        return count;
     }
 
     public int solvePart2() {
-        return 0;
+        int count = 0, sum = input[0] + input[1] + input[2];
+        for (int i = 3; i < input.length; i++) {
+            int next = sum - input[i - 3] + input[i];
+            if (next > sum) {
+                count++;
+            }
+        }
+        return count;
     }
 }
