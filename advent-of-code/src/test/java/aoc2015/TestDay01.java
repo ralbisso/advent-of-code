@@ -5,7 +5,7 @@ import org.junit.Test;
 
 public class TestDay01 {
 
-    Day01 day = new Day01();
+    private final Day01 day = new Day01();
 
     @Test
     public void testPart1() {
