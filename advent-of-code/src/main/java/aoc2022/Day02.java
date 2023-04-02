@@ -2,6 +2,7 @@ package aoc2022;
 
 import java.util.List;
 
+import aoc2022.classes.RockPaperScissors;
 import utils.FileUtils;
 import utils.enums.Day;
 
@@ -11,11 +12,16 @@ public class Day02 extends AoC2022 {
     private final List<String> input = FileUtils.getAllLines(year, day);
 
     public int solvePart1() {
-        System.out.println(input);
-        return 0;
+        return input.stream()
+                .map(RockPaperScissors::new)
+                .mapToInt(RockPaperScissors::getScorePart1)
+                .sum();
     }
 
     public int solvePart2() {
-        return 0;
+        return input.stream()
+                .map(RockPaperScissors::new)
+                .mapToInt(RockPaperScissors::getScorePart2)
+                .sum();
     }
 }
