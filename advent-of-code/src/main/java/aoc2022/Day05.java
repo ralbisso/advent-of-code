@@ -7,7 +7,7 @@ import utils.enums.Day;
 
 public class Day05 extends AoC2022 {
 
-    private final Day day = Day.DAY_03;
+    private final Day day = Day.DAY_05;
     private final List<String> input = FileUtils.getAllLines(year, day);
 
     public int solvePart1() {

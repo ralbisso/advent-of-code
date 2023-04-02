@@ -5,9 +5,9 @@ import java.util.List;
 import utils.FileUtils;
 import utils.enums.Day;
 
-public class Day04 extends AoC2022 {
+public class Day22 extends AoC2022 {
 
-    private final Day day = Day.DAY_04;
+    private final Day day = Day.DAY_22;
     private final List<String> input = FileUtils.getAllLines(year, day);
 
     public int solvePart1() {
