@@ -1,8 +1,9 @@
 package aoc2020;
 
+import static utils.FileUtils.getAllLinesAsIntArray;
+
 import java.util.Arrays;
 
-import static utils.FileUtils.getAllLines;
 import utils.enums.Day;
 
 public class Day01 extends AoC2020 {

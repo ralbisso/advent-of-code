@@ -1,6 +1,6 @@
 package aoc2015;
 
-import static utils.getLineAsCharArray;
+import static utils.FileUtils.getLineAsCharArray;
 
 import utils.enums.Day;
 

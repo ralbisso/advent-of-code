@@ -1,6 +1,7 @@
 package aoc2021;
 
-import static utils.FileUtils.getAllLines;
+import static utils.FileUtils.getAllLinesAsIntArray;
+
 import utils.enums.Day;
 
 public class Day01 extends AoC2021 {
