@@ -1,12 +1,13 @@
 package aoc2015;
 
-import utils.FileUtils;
+import static utils.FileUtils.getLineAsCharArray;
+
 import utils.enums.Day;
 
 public class Day01 extends AoC2015 {
 
     private final Day day = Day.DAY_01;
-    private final char[] input = FileUtils.getLineAsCharArray(year, day);
+    private final char[] input = getLineAsCharArray(year, day);
 
     public int solvePart1() {
         int floor = 0;

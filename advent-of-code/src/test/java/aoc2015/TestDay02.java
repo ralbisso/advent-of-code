@@ -14,6 +14,6 @@ public class TestDay02 {
 
     @Test
     public void testPart2() {
-        Assert.assertEquals(Solutions2015.DAY02_PART1, day.solvePart2());
+        Assert.assertEquals(Solutions2015.DAY02_PART2, day.solvePart2());
     }
 }
