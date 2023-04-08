@@ -2,13 +2,13 @@ package aoc2020;
 
 import java.util.Arrays;
 
-import utils.FileUtils;
+import static utils.FileUtils.getAllLines;
 import utils.enums.Day;
 
 public class Day01 extends AoC2020 {
 
     private final Day day = Day.DAY_01;
-    private final int[] input = FileUtils.getAllLinesAsIntArray(year, day);
+    private final int[] input = getAllLinesAsIntArray(year, day);
 
     public int solvePart1() {
         Arrays.sort(input);

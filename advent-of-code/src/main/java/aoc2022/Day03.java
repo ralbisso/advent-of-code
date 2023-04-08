@@ -2,13 +2,13 @@ package aoc2022;
 
 import java.util.List;
 
-import utils.FileUtils;
+import static utils.FileUtils.getAllLines;
 import utils.enums.Day;
 
 public class Day03 extends AoC2022 {
 
     private final Day day = Day.DAY_03;
-    private final List<String> input = FileUtils.getAllLines(year, day);
+    private final List<String> input = getAllLines(year, day);
 
     private final static String LOWERCASE_ALPHABET = "abcdefghijklmnopqrstuvwxyz";
     private final static String UPPERCASE_ALPHABET = LOWERCASE_ALPHABET.toUpperCase();

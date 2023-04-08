@@ -1,6 +1,6 @@
 package aoc2015;
 
-import static utils.FileUtils.getAllLines;
+import static utils.getAllLines;
 
 import java.util.List;
 

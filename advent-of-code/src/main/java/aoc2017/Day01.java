@@ -1,12 +1,12 @@
 package aoc2017;
 
-import utils.FileUtils;
+import static utils.FileUtils.getAllLines;
 import utils.enums.Day;
 
 public class Day01 extends AoC2017 {
 
     private final Day day = Day.DAY_01;
-    private final char[] input = FileUtils.getLineAsCharArray(year, day);
+    private final char[] input = getLineAsCharArray(year, day);
 
     public int solvePart1() {
         int sum = 0, length = input.length;

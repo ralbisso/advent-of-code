@@ -2,13 +2,13 @@ package aoc2021;
 
 import java.util.List;
 
-import utils.FileUtils;
+import static utils.FileUtils.getAllLines;
 import utils.enums.Day;
 
 public class Day04 extends AoC2021 {
 
     private final Day day = Day.DAY_04;
-    private final List<String> input = FileUtils.getAllLines(year, day);
+    private final List<String> input = getAllLines(year, day);
 
     public int solvePart1() {
         System.out.println(input);

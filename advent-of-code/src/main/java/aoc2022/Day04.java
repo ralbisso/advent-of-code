@@ -3,13 +3,13 @@ package aoc2022;
 import java.util.List;
 
 import aoc2022.classes.AssignmentPair;
-import utils.FileUtils;
+import static utils.FileUtils.getAllLines;
 import utils.enums.Day;
 
 public class Day04 extends AoC2022 {
 
     private final Day day = Day.DAY_04;
-    private final List<String> input = FileUtils.getAllLines(year, day);
+    private final List<String> input = getAllLines(year, day);
 
     public int solvePart1() {
         return (int) input.stream()
