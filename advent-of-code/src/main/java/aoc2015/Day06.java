@@ -22,7 +22,7 @@ public class Day06 extends AoC2015 {
         for (String instruction : input) {
             followInstruction(grid, new Action(instruction));
         }
-        return countLights(grid);
+        return getLightsCount(grid);
     }
 
     public int solvePart2() {
@@ -61,7 +61,7 @@ public class Day06 extends AoC2015 {
         }
     }
 
-    private int countLights(boolean[][] grid) {
+    private int getLightsCount(boolean[][] grid) {
         int count = 0;
         for (int i = 0; i < grid.length; i++) {
             for (int j = 0; j < grid.length; j++) {
