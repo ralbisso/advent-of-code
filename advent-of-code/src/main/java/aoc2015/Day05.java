@@ -2,14 +2,14 @@ package aoc2015;
 
 import static utils.FileUtils.getAllLines;
 
-import java.util.List;
+import java.util.stream.Stream;
 
 import utils.enums.Day;
 
 public class Day05 extends AoC2015 {
 
     private final Day day = Day.DAY_05;
-    private final List<String> input = getAllLines(year, day);
+    private final Stream<String> input = getAllLines(year, day).stream();
     
     private final String atLeast3Vowels = "^(.*[aeiou]){3}.*$";
     private final String atLeast1LetterAppearingTwiceInARow = ".*(.)\\1.*";
@@ -18,11 +18,11 @@ public class Day05 extends AoC2015 {
     private final String atLeast1RepeatingLetterWith1LetterInBetween = ".*(\\w)\\w\\1.*";
 
     public int solvePart1() {
-        return (int) input.stream().filter(this::isNiceOldRules).count();
+        return (int) input.filter(this::isNiceOldRules).count();
     }
 
     public int solvePart2() {
-        return (int) input.stream().filter(this::isNiceNewRules).count();
+        return (int) input.filter(this::isNiceNewRules).count();
     }
 
     private boolean isNiceOldRules(String string) {
