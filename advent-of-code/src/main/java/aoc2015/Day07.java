@@ -12,6 +12,9 @@ public class Day07 extends AoC2015 {
 
     private final Day day = Day.DAY_07;
     private final List<String> input = getAllLines(year, day);
+
+    private final static String SIGNAL_A = "a";
+    private final static String SIGNAL_B = "b";
     private final static String AND = "AND";
     private final static String OR = "OR";
     private final static String LSHIFT = "LSHIFT";
@@ -27,7 +30,7 @@ public class Day07 extends AoC2015 {
                 if (!circuit.containsKey(out)) {
                     Integer signal = getSignal(in, circuit);
                     if (signal != null) {
-                        if ("a".equals(out)) {
+                        if (SIGNAL_A.equals(out)) {
                             return signal;
                         }
                         circuit.put(out, signal);
@@ -40,15 +43,15 @@ public class Day07 extends AoC2015 {
 
     public int solvePart2() {
         Map<String, Integer> circuit = new HashMap<>();
-        circuit.put("b", 46065);
+        circuit.put(SIGNAL_B, 46065);
         while (circuit.size() < input.size()) {
             for (String wire : input) {
                 String[] split = wire.split(" -> ");
                 String in = split[0], out = split[1];
-                if (!circuit.containsKey(out) && !"b".equals(out)) {
+                if (!circuit.containsKey(out) && !SIGNAL_B.equals(out)) {
                     Integer signal = getSignal(in, circuit);
                     if (signal != null) {
-                        if ("a".equals(out)) {
+                        if (SIGNAL_A.equals(out)) {
                             return signal;
                         }
                         circuit.put(out, signal);
