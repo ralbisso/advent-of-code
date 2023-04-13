@@ -62,9 +62,9 @@ public class Day06 extends AoC2015 {
     }
 
     private int getLightsCount(boolean[][] grid) {
-        int count = 0;
-        for (int i = 0; i < grid.length; i++) {
-            for (int j = 0; j < grid.length; j++) {
+        int count = 0, length = grid.length;
+        for (int i = 0; i < length; i++) {
+            for (int j = 0; j < length; j++) {
                 if (grid[i][j]) {
                     count++;
                 }
@@ -74,9 +74,9 @@ public class Day06 extends AoC2015 {
     }
 
     private int getTotalBrightness(int[][] grid) {
-        int brightness = 0;
-        for (int i = 0; i < grid.length; i++) {
-            for (int j = 0; j < grid.length; j++) {
+        int brightness = 0, length = grid.length;
+        for (int i = 0; i < length; i++) {
+            for (int j = 0; j < length; j++) {
                 brightness += grid[i][j];
             }
         }
