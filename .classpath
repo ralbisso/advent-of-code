@@ -17,6 +17,7 @@
 	<classpathentry kind="src" path="2021/src/test/java"/>
 	<classpathentry kind="src" path="2022/src/main/java"/>
 	<classpathentry kind="src" path="2022/src/test/java"/>
+	<classpathentry kind="src" path="common/src/main"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER">
 		<attributes>
 			<attribute name="module" value="true"/>
