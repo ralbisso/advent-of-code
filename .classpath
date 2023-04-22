@@ -1,16 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry kind="src" path="2015/src/main/java"/>
-	<classpathentry kind="src" path="2016/src/main/java"/>
-	<classpathentry kind="src" path="2017/src/main/java"/>
-	<classpathentry kind="src" path="2018/src/main/java"/>
-	<classpathentry kind="src" path="2019/src/main/java"/>
-	<classpathentry kind="src" path="2020/src/main/java"/>
-	<classpathentry kind="src" path="2021/src/main/java"/>
-	<classpathentry kind="src" path="2022/src/main/java"/>
-	<classpathentry kind="src" path="2023/src/main/java"/>
 	<classpathentry kind="src" path="src/main/java"/>
-	<classpathentry kind="src" path="common/src/main/java"/>
+	<classpathentry kind="src" path="2015/src/main/java"/>
+	<classpathentry kind="src" path="2015/src/test/java"/>
+	<classpathentry kind="src" path="2016/src/main/java"/>
+	<classpathentry kind="src" path="2016/src/test/java"/>
+	<classpathentry kind="src" path="2017/src/main/java"/>
+	<classpathentry kind="src" path="2017/src/test/java"/>
+	<classpathentry kind="src" path="2018/src/main/java"/>
+	<classpathentry kind="src" path="2018/src/test/java"/>
+	<classpathentry kind="src" path="2019/src/main/java"/>
+	<classpathentry kind="src" path="2019/src/test/java"/>
+	<classpathentry kind="src" path="2020/src/main/java"/>
+	<classpathentry kind="src" path="2020/src/test/java"/>
+	<classpathentry kind="src" path="2021/src/main/java"/>
+	<classpathentry kind="src" path="2021/src/test/java"/>
+	<classpathentry kind="src" path="2022/src/main/java"/>
+	<classpathentry kind="src" path="2022/src/test/java"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER">
 		<attributes>
 			<attribute name="module" value="true"/>
@@ -22,5 +28,6 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/5"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

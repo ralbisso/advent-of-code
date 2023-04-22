@@ -4,8 +4,8 @@ import static utils.FileUtils.getAllLines;
 
 import java.util.List;
 
-import enums.Day;
 import classes.Action;
+import enums.Day;
 
 
 public class Day06 extends AoC2015 {

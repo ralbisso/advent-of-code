@@ -4,7 +4,7 @@ import static utils.FileUtils.getAllLines;
 
 import java.util.List;
 
-import aoc2022.classes.AssignmentPair;
+import classes.AssignmentPair;
 import enums.Day;
 
 public class Day04 extends AoC2022 {

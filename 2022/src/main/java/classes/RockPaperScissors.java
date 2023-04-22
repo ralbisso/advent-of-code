@@ -22,7 +22,7 @@ public record RockPaperScissors(char opponent, char you) {
         default -> -1;
         };
     }
-    
+
     private int getShape() {
         return switch (you) {
         case 'X' -> 1; // Rock
@@ -35,31 +35,31 @@ public record RockPaperScissors(char opponent, char you) {
     private int guessOutcome() {
         return isLoss() ? 0 : isDraw() ? 3 : 6;
     }
-    
+
     private int guessShape() {
         return isRock() ? 1 : isPaper() ? 2 : 3;
     }
 
     private boolean isLoss() {
-        return opponent == 'A' && you == 'Z' 
+        return opponent == 'A' && you == 'Z'
                 || opponent == 'B' && you == 'X'
                 || opponent == 'C' && you == 'Y';
     }
 
     private boolean isDraw() {
-        return opponent == 'A' && you == 'X' 
+        return opponent == 'A' && you == 'X'
                 || opponent == 'B' && you == 'Y'
                 || opponent == 'C' && you == 'Z';
     }
-    
+
     private boolean isRock() {
-        return opponent == 'B' && you == 'X' 
+        return opponent == 'B' && you == 'X'
                 || opponent == 'A' && you == 'Y'
                 || opponent == 'C' && you == 'Z';
     }
-    
+
     private boolean isPaper() {
-        return opponent == 'C' && you == 'X' 
+        return opponent == 'C' && you == 'X'
                 || opponent == 'B' && you == 'Y'
                 || opponent == 'A' && you == 'Z';
     }

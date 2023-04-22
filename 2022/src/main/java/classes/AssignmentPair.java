@@ -23,7 +23,7 @@ public record AssignmentPair(Assignment assignment1, Assignment assignment2) {
     }
 
     public boolean hasOverlappingAssignment() {
-        return assignment1.isOverlapping(assignment2) 
+        return assignment1.isOverlapping(assignment2)
                 || assignment2.isOverlapping(assignment1);
     }
 

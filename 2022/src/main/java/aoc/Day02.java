@@ -4,7 +4,7 @@ import static utils.FileUtils.getAllLines;
 
 import java.util.List;
 
-import aoc2022.classes.RockPaperScissors;
+import classes.RockPaperScissors;
 import enums.Day;
 
 public class Day02 extends AoC2022 {
