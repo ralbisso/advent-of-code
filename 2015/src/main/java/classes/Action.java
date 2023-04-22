@@ -1,4 +1,4 @@
-package aoc2015.classes;
+package classes;
 
 public class Action {
 

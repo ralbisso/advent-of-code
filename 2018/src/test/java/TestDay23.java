@@ -1,7 +1,7 @@
-package aoc2018;
+package aoc;
 
-import org.junit.Assert;
-import org.junit.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
 
 public class TestDay23 {
 
@@ -9,11 +9,11 @@ public class TestDay23 {
 
     @Test
     public void testPart1() {
-        Assert.assertEquals(Solutions2018.DAY23_PART1, day.solvePart1());
+        assertEquals(Solutions2018.DAY23_PART1, day.solvePart1());
     }
 
     @Test
     public void testPart2() {
-        Assert.assertEquals(Solutions2018.DAY23_PART2, day.solvePart2());
+        assertEquals(Solutions2018.DAY23_PART2, day.solvePart2());
     }
 }

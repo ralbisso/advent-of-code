@@ -1,4 +1,4 @@
-package aoc2022.classes;
+package classes;
 
 public record RockPaperScissors(char opponent, char you) {
 

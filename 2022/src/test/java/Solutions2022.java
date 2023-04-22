@@ -1,4 +1,4 @@
-package aoc2022;
+package aoc;
 
 final class Solutions2022 {
     final static int DAY01_PART1 = 69501;

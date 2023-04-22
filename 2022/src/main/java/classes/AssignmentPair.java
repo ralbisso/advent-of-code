@@ -1,4 +1,4 @@
-package aoc2022.classes;
+package classes;
 
 public record AssignmentPair(Assignment assignment1, Assignment assignment2) {
 

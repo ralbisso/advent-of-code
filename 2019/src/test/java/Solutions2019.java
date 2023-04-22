@@ -1,4 +1,4 @@
-package aoc2019;
+package aoc;
 
 final class Solutions2019 {
     final static int DAY01_PART1 = 3318195;
