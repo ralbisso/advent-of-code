@@ -1,21 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
+	<classpathentry kind="src" path="2015/src/main/java"/>
+	<classpathentry kind="src" path="2016/src/main/java"/>
+	<classpathentry kind="src" path="2017/src/main/java"/>
+	<classpathentry kind="src" path="2018/src/main/java"/>
+	<classpathentry kind="src" path="2019/src/main/java"/>
+	<classpathentry kind="src" path="2020/src/main/java"/>
+	<classpathentry kind="src" path="2021/src/main/java"/>
+	<classpathentry kind="src" path="2022/src/main/java"/>
+	<classpathentry kind="src" path="2023/src/main/java"/>
+	<classpathentry kind="src" path="src/main/java"/>
+	<classpathentry kind="src" path="common/src/main/java"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER">
 		<attributes>
+			<attribute name="module" value="true"/>
 			<attribute name="maven.pomderived" value="true"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="src" output="target/classes" path="advent-of-code/src/main/java">
-		<attributes>
-			<attribute name="optional" value="true"/>
-			<attribute name="maven.pomderived" value="true"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="src" output="target/test-classes" path="advent-of-code/src/test/java">
-		<attributes>
-			<attribute name="optional" value="true"/>
-			<attribute name="maven.pomderived" value="true"/>
-			<attribute name="test" value="true"/>
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
