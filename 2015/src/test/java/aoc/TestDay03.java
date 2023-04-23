@@ -5,6 +5,7 @@ import static aoc.Solutions2015.DAY03_PART2;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.Test;
+
 public class TestDay03 {
 
     private final Day03 day = new Day03();
