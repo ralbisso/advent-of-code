@@ -6,7 +6,7 @@ import static utils.FileUtils.getAllLines;
 import java.util.List;
 
 public class Day25 extends AoC2016 {
-    
+
 	private final List<String> input = getAllLines(DAY_25);
 
     public int solve() {

@@ -1,11 +1,11 @@
 package aoc;
 
+import static enums.Day.DAY_02;
 import static utils.FileUtils.getAllLines;
 
 import java.util.List;
 
 import classes.RockPaperScissors;
-import static enums.Day.DAY_02;
 
 public class Day02 extends AoC2022 {
 

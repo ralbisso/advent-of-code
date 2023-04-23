@@ -1,7 +1,7 @@
 package enums;
 
 public enum Year {
-    
+
     YEAR_2015(2015),
     YEAR_2016(2016),
     YEAR_2017(2017),
@@ -12,10 +12,10 @@ public enum Year {
     YEAR_2022(2022);
 
     private int year;
-    
+
     private Year(int year) {
         setYear(year);
-        
+
     }
 
     public int getYear() {

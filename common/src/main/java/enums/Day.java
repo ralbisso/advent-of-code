@@ -1,7 +1,7 @@
 package enums;
 
 public enum Day {
-    
+
     DAY_01("day01"),
     DAY_02("day02"),
     DAY_03("day03"),
@@ -29,7 +29,7 @@ public enum Day {
     DAY_25("day25");
 
     private String day;
-    
+
     private Day(String day) {
         setDay(day);
     }
