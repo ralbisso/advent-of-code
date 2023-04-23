@@ -1,5 +1,7 @@
 package aoc;
 
+import static aoc.Solutions2022.DAY12_PART1;
+import static aoc.Solutions2022.DAY12_PART2;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.Test;
@@ -10,11 +12,11 @@ public class TestDay12 {
 
     @Test
     public void testPart1() {
-        assertEquals(Solutions2022.DAY12_PART1, day.solvePart1());
+        assertEquals(DAY12_PART1, day.solvePart1());
     }
 
     @Test
     public void testPart2() {
-        assertEquals(Solutions2022.DAY12_PART2, day.solvePart2());
+        assertEquals(DAY12_PART2, day.solvePart2());
     }
 }

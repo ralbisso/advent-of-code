@@ -1,5 +1,6 @@
 package aoc;
 
+import static aoc.Solutions2021.DAY25;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.Test;
@@ -10,6 +11,6 @@ public class TestDay25 {
 
     @Test
     public void test() {
-        assertEquals(Solutions2021.DAY25, day.solve());
+        assertEquals(DAY25, day.solve());
     }
 }
