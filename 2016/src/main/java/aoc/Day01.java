@@ -3,12 +3,12 @@ package aoc;
 import static utils.FileUtils.getLine;
 
 import enums.Day;
-import utils.enums.Direction;
+import enums.Direction;
 
 public class Day01 extends AoC2016 {
 
     private final Day day = Day.DAY_01;
-    private final String[] input = getLine(year, day).split(", ");
+    private final String[] input = getLine(day).split(", ");
 
     public int solvePart1() {
         int facing = 0; // Direction index: NORTH

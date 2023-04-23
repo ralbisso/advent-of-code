@@ -9,7 +9,7 @@ import enums.Day;
 public class Day01 extends AoC2018 {
 
     private final Day day = Day.DAY_01;
-    private final int[] input = getAllLinesAsIntArray(year, day);
+    private final int[] input = getAllLinesAsIntArray(day);
 
     public int solvePart1() {
         int frequency = 0;

@@ -7,7 +7,7 @@ import enums.Day;
 public class Day01 extends AoC2017 {
 
     private final Day day = Day.DAY_01;
-    private final char[] input = getLineAsCharArray(year, day);
+    private final char[] input = getLineAsCharArray(day);
 
     public int solvePart1() {
         int sum = 0, length = input.length;
