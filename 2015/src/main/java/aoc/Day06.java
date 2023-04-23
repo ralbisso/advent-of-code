@@ -1,11 +1,11 @@
 package aoc;
 
+import static enums.Day.DAY_06;
 import static utils.FileUtils.getAllLines;
 
 import java.util.List;
 
 import classes.Action;
-import static enums.Day.DAY_06;
 
 public class Day06 extends AoC2015 {
 

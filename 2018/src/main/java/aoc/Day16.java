@@ -4,7 +4,7 @@ import static utils.FileUtils.getAllLines;
 
 import java.util.List;
 
-import enums.Day;
+import static enums.Day.DAY_;
 
 public class Day16 extends AoC2018 {
 

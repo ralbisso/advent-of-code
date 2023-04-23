@@ -4,7 +4,7 @@ import static utils.FileUtils.getAllLinesAsIntArray;
 
 import java.util.HashSet;
 
-import enums.Day;
+import static enums.Day.DAY_;
 
 public class Day01 extends AoC2018 {
 

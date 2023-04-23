@@ -1,15 +1,13 @@
 package aoc;
 
+import static enums.Day.DAY_04;
 import static utils.FileUtils.getLine;
 
 import org.apache.commons.codec.digest.DigestUtils;
 
-import enums.Day;
-
 public class Day04 extends AoC2015 {
 
-    private final Day day = Day.DAY_04;
-    private final String input = getLine(day);
+    private final String input = getLine(DAY_04);
 
     public int solvePart1() {
         int answer = 0;

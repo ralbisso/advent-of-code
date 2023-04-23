@@ -1,16 +1,15 @@
 package aoc;
 
+import static enums.Day.DAY_03;
 import static utils.FileUtils.getLineAsCharArray;
 
 import java.util.HashSet;
 
 import classes.Position;
-import enums.Day;
 
 public class Day03 extends AoC2015 {
 
-    private final Day day = Day.DAY_03;
-    private final char[] input = getLineAsCharArray(day);
+    private final char[] input = getLineAsCharArray(DAY_03);
 
     public int solvePart1() {
         var houses = new HashSet<>();

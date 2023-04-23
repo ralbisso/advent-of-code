@@ -1,17 +1,15 @@
 package aoc;
 
+import static enums.Day.DAY_07;
 import static utils.FileUtils.getAllLines;
 
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import enums.Day;
-
 public class Day07 extends AoC2015 {
 
-    private final Day day = Day.DAY_07;
-    private final List<String> input = getAllLines(day);
+    private final List<String> input = getAllLines(DAY_07);
 
     private final static String SIGNAL_A = "a";
     private final static String SIGNAL_B = "b";

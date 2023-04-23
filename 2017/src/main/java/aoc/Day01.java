@@ -2,7 +2,7 @@ package aoc;
 
 import static utils.FileUtils.getLineAsCharArray;
 
-import enums.Day;
+import static enums.Day.DAY_;
 
 public class Day01 extends AoC2017 {
 
