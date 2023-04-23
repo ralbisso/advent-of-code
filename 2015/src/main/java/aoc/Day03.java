@@ -10,7 +10,7 @@ import enums.Day;
 public class Day03 extends AoC2015 {
 
     private final Day day = Day.DAY_03;
-    private final char[] input = getLineAsCharArray(year, day);
+    private final char[] input = getLineAsCharArray(day);
 
     public int solvePart1() {
         var houses = new HashSet<>();

@@ -9,7 +9,7 @@ import enums.Day;
 public class Day05 extends AoC2015 {
 
     private final Day day = Day.DAY_05;
-    private final Stream<String> input = getAllLines(year, day).stream();
+    private final Stream<String> input = getAllLines(day).stream();
 
     private final String atLeast3Vowels = "^(.*[aeiou]){3}.*$";
     private final String atLeast1LetterAppearingTwiceInARow = ".*(.)\\1.*";

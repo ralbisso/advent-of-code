@@ -11,7 +11,7 @@ import enums.Day;
 public class Day07 extends AoC2015 {
 
     private final Day day = Day.DAY_07;
-    private final List<String> input = getAllLines(year, day);
+    private final List<String> input = getAllLines(day);
 
     private final static String SIGNAL_A = "a";
     private final static String SIGNAL_B = "b";

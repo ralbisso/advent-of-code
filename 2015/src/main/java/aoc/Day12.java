@@ -2,18 +2,17 @@ package aoc;
 
 import static utils.FileUtils.getLine;
 
-import java.text.ParseException;
-
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
 
 import enums.Day;
 
 public class Day12 extends AoC2015 {
 
     private final Day day = Day.DAY_12;
-    private final JSONArray input = getJSONArray(getLine(year, day));
+    private final JSONArray input = getJSONArray(getLine(day));
 
     public int solvePart1() {
         return getSum(input);

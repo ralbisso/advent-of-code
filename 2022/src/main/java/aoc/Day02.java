@@ -5,12 +5,11 @@ import static utils.FileUtils.getAllLines;
 import java.util.List;
 
 import classes.RockPaperScissors;
-import enums.Day;
+import static enums.Day.DAY_02;
 
 public class Day02 extends AoC2022 {
 
-    private final Day day = Day.DAY_02;
-    private final List<RockPaperScissors> input = getAllLines(year, day).stream()
+    private final List<RockPaperScissors> input = getAllLines(DAY_02).stream()
             .map(RockPaperScissors::new).toList();
 
     public int solvePart1() {

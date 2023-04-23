@@ -9,7 +9,7 @@ import enums.Day;
 public class Day23 extends AoC2019 {
 
     private final Day day = Day.DAY_23;
-    private final List<String> input = getAllLines(year, day);
+    private final List<String> input = getAllLines(day);
 
     public int solvePart1() {
         System.out.println(input);

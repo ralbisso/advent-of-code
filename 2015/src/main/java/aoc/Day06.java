@@ -5,13 +5,11 @@ import static utils.FileUtils.getAllLines;
 import java.util.List;
 
 import classes.Action;
-import enums.Day;
-
+import static enums.Day.DAY_06;
 
 public class Day06 extends AoC2015 {
 
-    private final Day day = Day.DAY_06;
-    private final List<String> input = getAllLines(year, day);
+    private final List<String> input = getAllLines(DAY_06);
 
     private final static int SIZE = 1000;
     private final static String TURN_ON = "turn on";

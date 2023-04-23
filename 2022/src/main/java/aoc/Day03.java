@@ -9,7 +9,7 @@ import enums.Day;
 public class Day03 extends AoC2022 {
 
     private final Day day = Day.DAY_03;
-    private final List<String> input = getAllLines(year, day);
+    private final List<String> input = getAllLines(day);
 
     private final static String LOWERCASE_ALPHABET = "abcdefghijklmnopqrstuvwxyz";
     private final static String UPPERCASE_ALPHABET = LOWERCASE_ALPHABET.toUpperCase();

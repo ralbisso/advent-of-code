@@ -5,12 +5,11 @@ import static utils.FileUtils.getAllLines;
 import java.util.List;
 
 import classes.AssignmentPair;
-import enums.Day;
+import static enums.Day.DAY_04;
 
 public class Day04 extends AoC2022 {
 
-    private final Day day = Day.DAY_04;
-    private final List<AssignmentPair> input = getAllLines(year, day).stream()
+    private final List<AssignmentPair> input = getAllLines(DAY_04).stream()
             .map(AssignmentPair::new).toList();
 
     public int solvePart1() {

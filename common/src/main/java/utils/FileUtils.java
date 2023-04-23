@@ -7,14 +7,13 @@ import java.nio.file.Paths;
 import java.util.List;
 
 import enums.Day;
-import enums.Year;
 
 public class FileUtils {
 
     private final static String RESOURCES = "src/main/resources/";
 
-    public static List<String> getAllLines(Year year, Day day) {
-        Path filePath = Paths.get(RESOURCES + year.getYear() + "/" + day.getDay());
+    public static List<String> getAllLines(Day day) {
+        Path filePath = Paths.get(RESOURCES + day.getDay());
         List<String> lines = null;
         try {
             lines = Files.readAllLines(filePath);
@@ -24,15 +23,15 @@ public class FileUtils {
         return lines;
     }
 
-    public static int[] getAllLinesAsIntArray(Year year, Day day) {
-        return getAllLines(year, day).stream().mapToInt(Integer::parseInt).toArray();
+    public static int[] getAllLinesAsIntArray(Day day) {
+        return getAllLines(day).stream().mapToInt(Integer::parseInt).toArray();
     }
 
-    public static String getLine(Year year, Day day) {
-        return getAllLines(year, day).get(0);
+    public static String getLine(Day day) {
+        return getAllLines(day).get(0);
     }
 
-    public static char[] getLineAsCharArray(Year year, Day day) {
-        return getLine(year, day).toCharArray();
+    public static char[] getLineAsCharArray(Day day) {
+        return getLine(day).toCharArray();
     }
 }
