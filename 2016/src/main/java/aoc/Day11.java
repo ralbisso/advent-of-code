@@ -1,15 +1,13 @@
 package aoc;
 
+import static enums.Day.DAY_11;
 import static utils.FileUtils.getAllLines;
 
 import java.util.List;
 
-import static enums.Day.DAY_;
-
 public class Day11 extends AoC2016 {
 
-    private final Day day = Day.DAY_11;
-    private final List<String> input = getAllLines(day);
+    private final List<String> input = getAllLines(DAY_11);
 
     public int solvePart1() {
         System.out.println(input);
