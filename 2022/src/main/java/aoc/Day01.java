@@ -9,8 +9,7 @@ import static enums.Day.DAY_01;
 
 public class Day01 extends AoC2022 {
 
-    private final Day day = Day.DAY_01;
-    private final List<String> input = getAllLines(day);
+    private final List<String> input = getAllLines(DAY_01);
 
     public int solvePart1() {
         int max = 0, elf = 0;

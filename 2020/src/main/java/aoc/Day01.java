@@ -8,8 +8,7 @@ import static enums.Day.DAY_01;
 
 public class Day01 extends AoC2020 {
 
-    private final Day day = Day.DAY_01;
-    private final int[] input = getAllLinesAsIntArray(day);
+    private final int[] input = getAllLinesAsIntArray(DAY_01);
 
     public int solvePart1() {
         Arrays.sort(input);

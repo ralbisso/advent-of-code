@@ -8,8 +8,7 @@ import static enums.Day.DAY_18;
 
 public class Day18 extends AoC2022 {
 
-    private final Day day = Day.DAY_18;
-    private final List<String> input = getAllLines(day);
+    private final List<String> input = getAllLines(DAY_18);
 
     public int solvePart1() {
         System.out.println(input);
