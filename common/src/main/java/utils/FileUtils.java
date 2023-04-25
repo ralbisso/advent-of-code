@@ -10,40 +10,49 @@ import enums.Day;
 
 public class FileUtils {
 
-    private final static String RESOURCES = "src/main/resources/";
+	private final static String RESOURCES = "src/main/resources/";
 
-    public static List<String> getAllLines(Day day) {
-        Path filePath = Paths.get(RESOURCES + day.getDay());
-        List<String> lines = null;
-        try {
-            lines = Files.readAllLines(filePath);
-        } catch (IOException e) {
-            System.out.format("I/O error: %s%n", e);
-        }
-        return lines;
-    }
+	public static List<String> getAllLines(Day day) {
+		Path filePath = Paths.get(RESOURCES + day.getDay());
+		List<String> lines = null;
+		try {
+			lines = Files.readAllLines(filePath);
+		} catch (IOException e) {
+			System.out.format("I/O error: %s%n", e);
+		}
+		return lines;
+	}
 
-    public static int[] getAllLinesAsIntArray(Day day) {
-        return getAllLines(day).stream().mapToInt(Integer::parseInt).toArray();
-    }
-    
-    public static char[][] getAllLinesAsCharMatrix(Day day) {
-    	List<String> lines = getAllLines(day);
-    	char[][] matrix = new char[lines.size()][lines.get(0).length()];
-    	for (int i = 0; i < matrix.length; i++) {
-    		String line = lines.get(i);
-    		for (int j = 0; j < matrix[i].length; j++) {
-    			matrix[i][j] = line.charAt(j);
-    		}
-    	}
-        return matrix;
-    }
+	public static int[] getAllLinesAsIntArray(Day day) {
+		return getAllLines(day).stream().mapToInt(Integer::parseInt).toArray();
+	}
 
-    public static String getLine(Day day) {
-        return getAllLines(day).get(0);
-    }
+	public static char[][] getAllLinesAsCharMatrix(Day day) {
+		List<String> lines = getAllLines(day);
+		char[][] matrix = new char[lines.size()][lines.get(0).length()];
+		for (int i = 0; i < matrix.length; i++) {
+			String line = lines.get(i);
+			for (int j = 0; j < matrix[i].length; j++) {
+				matrix[i][j] = line.charAt(j);
+			}
+		}
+		return matrix;
+	}
 
-    public static char[] getLineAsCharArray(Day day) {
-        return getLine(day).toCharArray();
-    }
+	public static String getLine(Day day) {
+		return getAllLines(day).get(0);
+	}
+
+	public static char[] getLineAsCharArray(Day day) {
+		return getLine(day).toCharArray();
+	}
+
+	public static int[] getLineAsIntArray(Day day) {
+		String[] line = getLine(day).split(",");
+		int[] intArray = new int[line.length];
+		for (int i = 0; i < intArray.length; i++) {
+			intArray[i] = Integer.parseInt(line[i]);
+		}
+		return intArray;
+	}
 }
