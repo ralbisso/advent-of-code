@@ -26,6 +26,18 @@ public class FileUtils {
     public static int[] getAllLinesAsIntArray(Day day) {
         return getAllLines(day).stream().mapToInt(Integer::parseInt).toArray();
     }
+    
+    public static char[][] getAllLinesAsCharMatrix(Day day) {
+    	List<String> lines = getAllLines(day);
+    	char[][] matrix = new char[lines.size()][lines.get(0).length()];
+    	for (int i = 0; i < matrix.length; i++) {
+    		String line = lines.get(i);
+    		for (int j = 0; j < matrix[i].length; j++) {
+    			matrix[i][j] = line.charAt(j);
+    		}
+    	}
+        return matrix;
+    }
 
     public static String getLine(Day day) {
         return getAllLines(day).get(0);

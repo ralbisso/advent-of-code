@@ -35,7 +35,7 @@ final class Solutions2018 {
     final static int DAY16_PART2 = -1;
     final static int DAY17_PART1 = -1;
     final static int DAY17_PART2 = -1;
-    final static int DAY18_PART1 = -1;
+    final static int DAY18_PART1 = 620624;
     final static int DAY18_PART2 = -1;
     final static int DAY19_PART1 = -1;
     final static int DAY19_PART2 = -1;
