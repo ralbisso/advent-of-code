@@ -27,7 +27,7 @@ public class Day01 extends AoC2016 {
 			int steps = Integer.parseInt(instruction.substring(1));
 			for (int i = 0; i < steps; i++) {
 				position.walk(1);
-				if (!memo.add(position.getNewPosition())) {
+				if (!memo.add(position.copyPosition())) {
 					return getManhattanDistance(position);
 				}
 			}

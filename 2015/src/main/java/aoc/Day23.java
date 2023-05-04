@@ -7,14 +7,14 @@ import java.util.List;
 
 public class Day23 extends AoC2015 {
 
-    private final List<String> input = getAllLines(DAY_23);
+	private final List<String> input = getAllLines(DAY_23);
 
-    public int solvePart1() {
-        System.out.println(input);
-        return 0;
-    }
+	public int solvePart1() {
+		System.out.println(input);
+		return 0;
+	}
 
-    public int solvePart2() {
-        return 0;
-    }
+	public int solvePart2() {
+		return 0;
+	}
 }

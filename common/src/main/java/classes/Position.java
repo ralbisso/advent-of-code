@@ -88,7 +88,7 @@ public class Position {
 		x -= steps;
 	}
 
-	public Position getNewPosition() {
+	public Position copyPosition() {
 		return new Position(x, y);
 	}
 

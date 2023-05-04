@@ -1,20 +1,22 @@
 package aoc;
 
 import static enums.Day.DAY_03;
-import static enums.Direction.EAST;
-import static enums.Direction.NORTH;
-import static enums.Direction.SOUTH;
-import static enums.Direction.WEST;
 import static utils.FileUtils.getLineAsCharArray;
 
 import java.util.HashSet;
 import java.util.Set;
 
 import classes.Position;
+import enums.Direction;
 
 public class Day03 extends AoC2015 {
 
 	private final char[] input = getLineAsCharArray(DAY_03);
+
+	private final static char NORTH = '^';
+	private final static char SOUTH = 'v';
+	private final static char EAST = '>';
+	private final static char WEST = '<';
 
 	public int solvePart1() {
 		Set<Position> houses = new HashSet<>();
@@ -45,10 +47,10 @@ public class Day03 extends AoC2015 {
 
 	private void move(Position position, char c) {
 		switch (c) {
-		case '^' -> position.walk(NORTH);
-		case 'v' -> position.walk(SOUTH);
-		case '>' -> position.walk(EAST);
-		case '<' -> position.walk(WEST);
+		case NORTH -> position.walk(Direction.NORTH);
+		case SOUTH -> position.walk(Direction.SOUTH);
+		case EAST -> position.walk(Direction.EAST);
+		case WEST -> position.walk(Direction.WEST);
 		}
 	}
 }
