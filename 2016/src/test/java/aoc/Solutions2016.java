@@ -41,8 +41,8 @@ final class Solutions2016 {
 	final static int DAY19_PART2 = -1;
 	final static int DAY20_PART1 = -1;
 	final static int DAY20_PART2 = -1;
-	final static int DAY21_PART1 = -1;
-	final static int DAY21_PART2 = -1;
+	final static String DAY21_PART1 = "agcebfdh";
+	final static String DAY21_PART2 = "afhdbegc";
 	final static int DAY22_PART1 = 952;
 	final static int DAY22_PART2 = -1;
 	final static int DAY23_PART1 = 12516;
