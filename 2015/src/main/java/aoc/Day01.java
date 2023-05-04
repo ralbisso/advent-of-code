@@ -20,8 +20,7 @@ public class Day01 extends AoC2015 {
 	public int solvePart2() {
 		int floor = 0, position = 0;
 		while (floor >= 0) {
-			floor += (input[position] == OPENING_PARENTHESIS) ? 1 : -1;
-			position++;
+			floor += (input[position++] == OPENING_PARENTHESIS) ? 1 : -1;
 		}
 		return position;
 	}
