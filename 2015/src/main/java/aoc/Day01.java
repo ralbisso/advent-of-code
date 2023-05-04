@@ -18,12 +18,9 @@ public class Day01 extends AoC2015 {
 	}
 
 	public int solvePart2() {
-		int floor = 0, position = 1;
-		for (char c : input) {
-			floor += (c == OPENING_PARENTHESIS) ? 1 : -1;
-			if (floor == -1) {
-				break;
-			}
+		int floor = 0, position = 0;
+		while (floor >= 0) {
+			floor += (input[position] == OPENING_PARENTHESIS) ? 1 : -1;
 			position++;
 		}
 		return position;
