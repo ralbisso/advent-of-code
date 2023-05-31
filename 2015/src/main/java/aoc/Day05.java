@@ -24,7 +24,8 @@ public class Day05 extends AoC2015 {
 	}
 
 	private boolean isNiceOldRules(String string) {
-		return string.matches(atLeast3Vowels) && string.matches(atLeast1LetterAppearingTwiceInARow)
+		return string.matches(atLeast3Vowels) 
+				&& string.matches(atLeast1LetterAppearingTwiceInARow)
 				&& !string.matches(containsABorCDorPQorXY);
 	}
 
