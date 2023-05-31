@@ -1,5 +1,7 @@
 package aoc;
 
+import static classes.Split.ARROW;
+import static classes.Split.SPACE;
 import static enums.Day.DAY_07;
 import static utils.FileUtils.getAllLines;
 
@@ -11,8 +13,6 @@ public class Day07 extends AoC2015 {
 
 	private final List<String> input = getAllLines(DAY_07);
 
-	private final static String ARROW = " -> ";
-	private final static String SPACE = " ";
 	private final static String SIGNAL_A = "a";
 	private final static String SIGNAL_B = "b";
 	private final static String AND = "AND";
