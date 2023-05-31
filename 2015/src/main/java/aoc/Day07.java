@@ -11,6 +11,8 @@ public class Day07 extends AoC2015 {
 
 	private final List<String> input = getAllLines(DAY_07);
 
+	private final static String ARROW = " -> ";
+	private final static String SPACE = " ";
 	private final static String SIGNAL_A = "a";
 	private final static String SIGNAL_B = "b";
 	private final static String AND = "AND";
@@ -20,56 +22,49 @@ public class Day07 extends AoC2015 {
 
 	public int solvePart1() {
 		Map<String, Integer> circuit = new HashMap<>();
-
 		while (circuit.size() < input.size()) {
-			for (String wire : input) {
-				String[] split = wire.split(" -> ");
-				String in = split[0], out = split[1];
-				if (!circuit.containsKey(out)) {
-					Integer signal = getSignal(in, circuit);
-					if (signal != null) {
-						if (SIGNAL_A.equals(out)) {
-							return signal;
-						}
-						circuit.put(out, signal);
-					}
-				}
-			}
+			addWiresToCircuit(circuit);
 		}
-		return 0;
+		return circuit.get(SIGNAL_A);
 	}
 
 	public int solvePart2() {
 		Map<String, Integer> circuit = new HashMap<>();
 		circuit.put(SIGNAL_B, 46065);
 		while (circuit.size() < input.size()) {
-			for (String wire : input) {
-				String[] split = wire.split(" -> ");
-				String in = split[0], out = split[1];
-				if (!circuit.containsKey(out) && !SIGNAL_B.equals(out)) {
-					Integer signal = getSignal(in, circuit);
-					if (signal != null) {
-						if (SIGNAL_A.equals(out)) {
-							return signal;
-						}
-						circuit.put(out, signal);
+			addWiresToCircuit(circuit, false);
+		}
+		return circuit.get(SIGNAL_A);
+	}
+
+	private void addWiresToCircuit(Map<String, Integer> circuit) {
+		addWiresToCircuit(circuit, true);
+	}
+
+	private void addWiresToCircuit(Map<String, Integer> circuit, boolean allowSignalBOverriding) {
+		for (String wire : input) {
+			String[] split = wire.split(ARROW);
+			String in = split[0], out = split[1];
+			if (!circuit.containsKey(out) || (SIGNAL_B.equals(out) && allowSignalBOverriding)) {
+				Integer signal = getSignal(in, circuit);
+				if (signal != null) {
+					circuit.put(out, signal);
+					if (SIGNAL_A.equals(out)) {
+						return;
 					}
 				}
 			}
 		}
-		return 0;
 	}
 
 	private Integer getSignal(String in, Map<String, Integer> circuit) {
 		Integer signal = null;
-		String[] split = in.split(" ");
+		String[] split = in.split(SPACE);
 		switch (split.length) {
 		case 1 -> signal = getValue(split[0], circuit);
 		case 2 -> {
 			Integer wire = getValue(split[1], circuit);
-			if (wire != null) {
-				signal = ~wire;
-			}
+			signal = wire != null ? ~wire : null;
 		}
 		case 3 -> {
 			Integer wire1 = getValue(split[0], circuit);
