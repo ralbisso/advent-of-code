@@ -18,17 +18,13 @@ public class Day06 extends AoC2015 {
 
 	public int solvePart1() {
 		var grid = new boolean[SIZE][SIZE];
-		for (String instruction : input) {
-			followInstruction(grid, new Action(instruction));
-		}
+		input.forEach(ins -> followInstruction(grid, new Action(ins)));
 		return getLightsCount(grid);
 	}
 
 	public int solvePart2() {
 		var grid = new int[SIZE][SIZE];
-		for (String instruction : input) {
-			followInstruction(grid, new Action(instruction));
-		}
+		input.forEach(ins -> followInstruction(grid, new Action(ins)));
 		return getTotalBrightness(grid);
 	}
 
