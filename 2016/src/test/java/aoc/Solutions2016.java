@@ -17,8 +17,8 @@ final class Solutions2016 {
 	final static int DAY07_PART2 = -1;
 	final static int DAY08_PART1 = -1;
 	final static int DAY08_PART2 = -1;
-	final static int DAY09_PART1 = -1;
-	final static int DAY09_PART2 = -1;
+	final static int DAY09_PART1 = 183269;
+	final static long DAY09_PART2 = 11317278863L;
 	final static int DAY10_PART1 = -1;
 	final static int DAY10_PART2 = -1;
 	final static int DAY11_PART1 = -1;
