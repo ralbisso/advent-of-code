@@ -5,14 +5,14 @@ import static utils.FileUtils.getLine;
 
 public class Day10 extends AoC2015 {
 
-	private final String input = getLine(DAY_10);
+	private final StringBuilder input = new StringBuilder(getLine(DAY_10));
 
 	public int solvePart1() {
-		return lookAndSay(new StringBuilder(input), 40);
+		return lookAndSay(input, 40);
 	}
 
 	public int solvePart2() {
-		return lookAndSay(new StringBuilder(input), 50);
+		return lookAndSay(input, 50);
 	}
 
 	private int lookAndSay(StringBuilder sequence, int times) {
