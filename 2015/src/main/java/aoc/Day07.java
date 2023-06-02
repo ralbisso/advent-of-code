@@ -42,11 +42,11 @@ public class Day07 extends AoC2015 {
 	}
 
 	private void addWiresToCircuit(Map<String, Integer> circuit, boolean allowSignalBOverriding) {
-		for (String wire : input) {
-			String[] split = wire.split(ARROW);
+		for (var wire : input) {
+			var split = wire.split(ARROW);
 			String in = split[0], out = split[1];
 			if (!circuit.containsKey(out) || (SIGNAL_B.equals(out) && allowSignalBOverriding)) {
-				Integer signal = getSignal(in, circuit);
+				var signal = getSignal(in, circuit);
 				if (signal != null) {
 					circuit.put(out, signal);
 					if (SIGNAL_A.equals(out)) {
@@ -59,16 +59,16 @@ public class Day07 extends AoC2015 {
 
 	private Integer getSignal(String in, Map<String, Integer> circuit) {
 		Integer signal = null;
-		String[] split = in.split(SPACE);
+		var split = in.split(SPACE);
 		switch (split.length) {
 		case 1 -> signal = getValue(split[0], circuit);
 		case 2 -> {
-			Integer wire = getValue(split[1], circuit);
+			var wire = getValue(split[1], circuit);
 			signal = wire != null ? ~wire : null;
 		}
 		case 3 -> {
-			Integer wire1 = getValue(split[0], circuit);
-			Integer wire2 = getValue(split[2], circuit);
+			var wire1 = getValue(split[0], circuit);
+			var wire2 = getValue(split[2], circuit);
 			if (wire1 != null && wire2 != null) {
 				switch (split[1]) {
 				case AND -> signal = wire1 & wire2;

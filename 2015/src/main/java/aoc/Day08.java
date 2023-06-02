@@ -17,7 +17,7 @@ public class Day08 extends AoC2015 {
 
 	public int solvePart1() {
 		int difference = 0;
-		for (String literal : input) {
+		for (var literal : input) {
 			difference += literal.length() - getInMemoryString(literal).length();
 		}
 		return difference;
@@ -25,14 +25,14 @@ public class Day08 extends AoC2015 {
 
 	public int solvePart2() {
 		int difference = 0;
-		for (String literal : input) {
+		for (var literal : input) {
 			difference += getEncodedString(literal).length() - literal.length();
 		}
 		return difference;
 	}
 
 	private String getInMemoryString(String string) {
-		StringBuilder sb = new StringBuilder();
+		var sb = new StringBuilder();
 		for (int i = 1; i < string.length() - 1; i++) {
 			char c = string.charAt(i);
 			if (c == BACKSLASH) {
@@ -49,7 +49,7 @@ public class Day08 extends AoC2015 {
 	}
 
 	private String getEncodedString(String string) {
-		StringBuilder sb = new StringBuilder(ESCAPED_QUOTE);
+		var sb = new StringBuilder(ESCAPED_QUOTE);
 		for (char c : string.toCharArray()) {
 			if (c == QUOTE || c == BACKSLASH) {
 				sb.append(BACKSLASH);

@@ -23,7 +23,7 @@ public class Day10 extends AoC2015 {
 	}
 
 	private StringBuilder lookAndSay(StringBuilder sequence) {
-		StringBuilder next = new StringBuilder();
+		var next = new StringBuilder();
 		for (int i = 0; i < sequence.length(); i++) {
 			char c = sequence.charAt(i);
 			int count = 1;

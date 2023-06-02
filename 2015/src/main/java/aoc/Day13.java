@@ -25,7 +25,7 @@ public class Day13 extends AoC2015 {
 	}
 
 	public int solvePart2() {
-		var table = getGuests(true);
+		var table = getGuests();
 		return getMaximumHappiness(table);
 	}
 
@@ -38,6 +38,10 @@ public class Day13 extends AoC2015 {
 			}
 		}
 		return max;
+	}
+
+	private Guest[] getGuests() {
+		return getGuests(false);
 	}
 
 	private Guest[] getGuests(boolean includesMe) {

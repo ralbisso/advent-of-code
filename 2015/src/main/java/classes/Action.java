@@ -1,5 +1,8 @@
 package classes;
 
+import static classes.Split.COMMA;
+import static classes.Split.SPACE;
+
 public class Action {
 
 	private final String action;
@@ -7,7 +10,7 @@ public class Action {
 	private final int[] end;
 
 	public Action(String instruction) {
-		String[] split = instruction.split(" ");
+		String[] split = instruction.split(SPACE);
 		if ("turn".equals(split[0])) {
 			this.action = "turn " + split[1];
 			this.begin = getCoordinates(split[2]);
@@ -20,7 +23,7 @@ public class Action {
 	}
 
 	private int[] getCoordinates(String coordinates) {
-		String[] split = coordinates.split(",");
+		String[] split = coordinates.split(COMMA);
 		return new int[] { Integer.parseInt(split[0]), Integer.parseInt(split[1]) };
 	}
 

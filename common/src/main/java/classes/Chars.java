@@ -9,4 +9,6 @@ public class Chars {
 	public final static char SOUTH = 'v';
 	public final static char EAST = '>';
 	public final static char WEST = '<';
+
+	public final static char SPACE = ' ';
 }
