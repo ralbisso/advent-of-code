@@ -16,20 +16,20 @@ public class Day05 extends AoC2015 {
 	private final static String AT_LEAST_1_REPEATING_LETTER_WITH_1_LETTER_IN_BETWEEN = ".*(\\w)\\w\\1.*";
 
 	public long solvePart1() {
-		return input.filter(this::isNiceOldRules).count();
+		return input.filter(this::isNiceOld).count();
 	}
 
 	public long solvePart2() {
-		return input.filter(this::isNiceNewRules).count();
+		return input.filter(this::isNice).count();
 	}
 
-	private boolean isNiceOldRules(String string) {
+	private boolean isNiceOld(String string) {
 		return string.matches(AT_LEAST_3_VOWELS) 
 				&& string.matches(AT_LEAST_1_LETTER_APPEARING_TWICE_IN_A_ROW)
 				&& !string.matches(CONTAINS_AB_CD_PQ_OR_XY);
 	}
 
-	private boolean isNiceNewRules(String string) {
+	private boolean isNice(String string) {
 		return string.matches(A_PAIR_OF_2_LETTERS_WITHOUT_OVERLAPPING)
 				&& string.matches(AT_LEAST_1_REPEATING_LETTER_WITH_1_LETTER_IN_BETWEEN);
 	}
