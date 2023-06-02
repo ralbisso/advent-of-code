@@ -12,6 +12,7 @@ public class Day06 extends AoC2015 {
 	private final List<String> input = getAllLines(DAY_06);
 
 	private final static int SIZE = 1000;
+
 	private final static String TURN_ON = "turn on";
 	private final static String TURN_OFF = "turn off";
 	private final static String TOGGLE = "toggle";
