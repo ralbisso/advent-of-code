@@ -1,13 +1,12 @@
 package aoc;
 
+import static classes.Chars.OPENING_PARENTHESIS;
 import static enums.Day.DAY_01;
 import static utils.FileUtils.getLineAsCharArray;
 
 public class Day01 extends AoC2015 {
 
 	private final char[] input = getLineAsCharArray(DAY_01);
-
-	private final static char OPENING_PARENTHESIS = '(';
 
 	public int solvePart1() {
 		int floor = 0;

@@ -1,5 +1,9 @@
 package aoc;
 
+import static classes.Chars.EAST;
+import static classes.Chars.NORTH;
+import static classes.Chars.SOUTH;
+import static classes.Chars.WEST;
 import static enums.Day.DAY_03;
 import static utils.FileUtils.getLineAsCharArray;
 
@@ -12,11 +16,6 @@ import enums.Direction;
 public class Day03 extends AoC2015 {
 
 	private final char[] input = getLineAsCharArray(DAY_03);
-
-	private final static char NORTH = '^';
-	private final static char SOUTH = 'v';
-	private final static char EAST = '>';
-	private final static char WEST = '<';
 
 	public int solvePart1() {
 		Set<Position> houses = new HashSet<>();

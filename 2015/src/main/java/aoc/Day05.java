@@ -15,12 +15,12 @@ public class Day05 extends AoC2015 {
 	private final String aPairOf2LettersWithoutOverlapping = ".*(\\w\\w).*\\1.*";
 	private final String atLeast1RepeatingLetterWith1LetterInBetween = ".*(\\w)\\w\\1.*";
 
-	public int solvePart1() {
-		return (int) input.filter(this::isNiceOldRules).count();
+	public long solvePart1() {
+		return input.filter(this::isNiceOldRules).count();
 	}
 
-	public int solvePart2() {
-		return (int) input.filter(this::isNiceNewRules).count();
+	public long solvePart2() {
+		return input.filter(this::isNiceNewRules).count();
 	}
 
 	private boolean isNiceOldRules(String string) {
