@@ -47,6 +47,10 @@ public class FileUtils {
 		return getLine(day).toCharArray();
 	}
 
+	public static int getLineAsInt(Day day) {
+		return Integer.parseInt(getLine(day));
+	}
+
 	public static int[] getLineAsIntArray(Day day) {
 		String[] line = getLine(day).split(",");
 		int[] intArray = new int[line.length];

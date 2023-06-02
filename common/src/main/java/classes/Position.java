@@ -1,5 +1,10 @@
 package classes;
 
+import static classes.Chars.EAST;
+import static classes.Chars.NORTH;
+import static classes.Chars.SOUTH;
+import static classes.Chars.WEST;
+
 import java.util.Objects;
 
 import enums.Direction;
@@ -63,7 +68,7 @@ public class Position {
 		}
 	}
 
-	public void walk(Direction direction) {
+	public void walk(char direction) {
 		switch (direction) {
 		case EAST -> walkEast(1);
 		case NORTH -> walkNorth(1);

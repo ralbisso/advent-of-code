@@ -10,8 +10,8 @@ public class Day01 extends AoC2015 {
 
 	public int solvePart1() {
 		int floor = 0;
-		for (char c : input) {
-			floor += (c == OPENING_PARENTHESIS) ? 1 : -1;
+		for (char parenthesis : input) {
+			floor += (parenthesis == OPENING_PARENTHESIS) ? 1 : -1;
 		}
 		return floor;
 	}

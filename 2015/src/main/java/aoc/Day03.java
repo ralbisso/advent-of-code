@@ -1,9 +1,5 @@
 package aoc;
 
-import static classes.Chars.EAST;
-import static classes.Chars.NORTH;
-import static classes.Chars.SOUTH;
-import static classes.Chars.WEST;
 import static enums.Day.DAY_03;
 import static utils.FileUtils.getLineAsCharArray;
 
@@ -11,7 +7,6 @@ import java.util.HashSet;
 import java.util.Set;
 
 import classes.Position;
-import enums.Direction;
 
 public class Day03 extends AoC2015 {
 
@@ -21,8 +16,8 @@ public class Day03 extends AoC2015 {
 		Set<Position> houses = new HashSet<>();
 		var santasPosition = new Position(0, 0);
 		houses.add(santasPosition);
-		for (char c : input) {
-			moveAndAddToHouses(santasPosition, c, houses);
+		for (char direction : input) {
+			moveAndAddToHouses(santasPosition, direction, houses);
 		}
 		return houses.size();
 	}
@@ -39,17 +34,8 @@ public class Day03 extends AoC2015 {
 		return houses.size();
 	}
 
-	private void moveAndAddToHouses(Position position, char c, Set<Position> houses) {
-		move(position, c);
+	private void moveAndAddToHouses(Position position, char direction, Set<Position> houses) {
+		position.walk(direction);
 		houses.add(position.copyPosition());
-	}
-
-	private void move(Position position, char c) {
-		switch (c) {
-		case NORTH -> position.walk(Direction.NORTH);
-		case SOUTH -> position.walk(Direction.SOUTH);
-		case EAST -> position.walk(Direction.EAST);
-		case WEST -> position.walk(Direction.WEST);
-		}
 	}
 }
