@@ -9,25 +9,29 @@ public class Day02 extends AoC2019 {
 
 	private final int[] input = getLineAsIntArray(DAY_02);
 
+	private final static int LIMIT = 100;
+	private final static int EXPECTED_OUTPUT = 19690720;
+
 	public int solvePart1() {
-		input[1] = 12;
-		input[2] = 2;
-		new IntCode(input).run();
-		return input[0];
+		return runProgram(12, 2);
 	}
 
 	public int solvePart2() {
-		for (int noun = 0; noun <= 99; noun++) {
-			for (int verb = 0; verb <= 99; verb++) {
-				int[] copy = input.clone();
-				copy[1] = noun;
-				copy[2] = verb;
-				new IntCode(copy).run();
-				if (copy[0] == 19690720) {
+		for (int noun = 0; noun < LIMIT; noun++) {
+			for (int verb = 0; verb < LIMIT; verb++) {
+				int output = runProgram(noun, verb);
+				if (output == EXPECTED_OUTPUT) {
 					return noun * 100 + verb;
 				}
 			}
 		}
 		return 0;
+	}
+
+	private int runProgram(int noun, int verb) {
+		int[] copy = input.clone();
+		copy[1] = noun;
+		copy[2] = verb;
+		return new IntCode(copy).run();
 	}
 }

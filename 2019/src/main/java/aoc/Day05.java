@@ -1,20 +1,23 @@
 package aoc;
 
 import static enums.Day.DAY_05;
-import static utils.FileUtils.getAllLines;
+import static utils.FileUtils.getLineAsIntArray;
 
-import java.util.List;
+import classes.IntCode;
 
 public class Day05 extends AoC2019 {
 
-    private final List<String> input = getAllLines(DAY_05);
+	private final int[] input = getLineAsIntArray(DAY_05);
 
-    public int solvePart1() {
-        System.out.println(input);
-        return 0;
-    }
+	public int solvePart1() {
+		var program = new IntCode(input, 1);
+		program.run();
+		return program.getOutput();
+	}
 
-    public int solvePart2() {
-        return 0;
-    }
+	public int solvePart2() {
+		var program = new IntCode(input, 5);
+		program.run();
+		return program.getOutput();
+	}
 }
